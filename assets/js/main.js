@@ -31,6 +31,7 @@ var app = new Vue (
         }
       },
 
+      // AL CLICK SUL DOT, LA FUNZIONE ASSEGNA A INDEX VALORE UGUALE ALL'INDICE DEL DOT SELEZIONATO
       dotSelection: function(dotSelected){
         this.index = dotSelected;
       }

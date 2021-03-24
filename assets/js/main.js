@@ -10,10 +10,16 @@ var app = new Vue (
         './assets/img/fire_walk_with_me.jpg',
         './assets/img/mulholland_drive.jpg',
         './assets/img/inland_empire.jpg'
-      ],
-      timer: null
-
+      ]
     },
+
+    // FACCIO SCORRERE LE IMMAGINI IN AUTOMTICO AD INTERVALLI DI 4 SECONDI
+    created() {
+      setInterval(() => {
+        this.nextFunction()
+      }, 4000);
+    },
+
     methods: {
       // AL CLICK SUL DIV NEXT, INCREMENTO L'INDICE DI 1 SE L'INDICE E' MINORE DEL NUMERO DELLE IMMAGINI NELL'ARRAY, ALTRIMENTI ASSEGNO ALL'INDICE VALORE 0 COSICCHE' SI POSSA TORNARE ALLA PRIMA IMMAGINE
       nextFunction: function() {
@@ -35,11 +41,6 @@ var app = new Vue (
       // AL CLICK SUL DOT, LA FUNZIONE ASSEGNA A INDEX VALORE UGUALE ALL'INDICE DEL DOT SELEZIONATO
       dotSelection: function(dotSelected){
         this.index = dotSelected;
-      },
-
-      automaticSlider: function() {
-        this.timer = setInterval(this.nextFunction, 3000);
       }
-
     }
 });

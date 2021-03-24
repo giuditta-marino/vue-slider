@@ -10,7 +10,8 @@ var app = new Vue (
         './assets/img/fire_walk_with_me.jpg',
         './assets/img/mulholland_drive.jpg',
         './assets/img/inland_empire.jpg'
-      ]
+      ],
+      timer: null
 
     },
     methods: {
@@ -36,9 +37,9 @@ var app = new Vue (
         this.index = dotSelected;
       },
 
-      automaticSlider: setInterval(function(){
-        this.nextFunction()
-      }, 3000);
+      automaticSlider: function() {
+        this.timer = setInterval(this.nextFunction, 3000);
+      }
 
     }
 });

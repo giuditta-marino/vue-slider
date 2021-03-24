@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+#root{
+  height: 100vh;
+}
+
+h1{
+  padding-top: 25px;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+.slider{
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .image img{
+  width: 400px;
+}
+
+.next, .prev{
+  margin: 0 25px;
+}
+
+.next, .prev i{
+  font-size: 2.5em;
+}

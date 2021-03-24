@@ -12,19 +12,26 @@
   <body>
   <div id="root">
     <h1>La filmografia di David Lynch</h1>
-    <div class="slider">
-      <div class="prev" @click= "prevFunction">
-        <i class="fas fa-chevron-left"></i>
-      </div>
+    <div class="slider-nav">
+      <div class="slider">
+        <div class="prev" @click= "prevFunction">
+          <i class="fas fa-chevron-left"></i>
+        </div>
 
-      <div class="image">
-        <img :src="arrayImg[index]" alt="">
-      </div>
+        <div class="image">
+          <img :src="arrayImg[index]" alt="">
+        </div>
 
-      <div class="next" @click="nextFunction">
-        <i class="fas fa-chevron-right"></i>
-      </div>
+        <div class="next" @click="nextFunction">
+          <i class="fas fa-chevron-right"></i>
+        </div>
 
+      </div>
+      <nav>
+        <i v-for="dot in arrayImg.length"
+           class="fas fa-circle"
+           :class=" (dot - 1 == index) ?  'active' : '' "></i>
+      </nav>
     </div>
 
   </div>

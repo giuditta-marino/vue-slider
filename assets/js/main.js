@@ -10,7 +10,7 @@ var app = new Vue (
         './assets/img/fire_walk_with_me.jpg',
         './assets/img/mulholland_drive.jpg',
         './assets/img/inland_empire.jpg'
-      ],
+      ]
 
     },
     methods: {

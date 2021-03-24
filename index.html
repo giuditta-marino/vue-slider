@@ -13,15 +13,15 @@
   <div id="root">
     <h1>La filmografia di David Lynch</h1>
     <div class="slider">
-      <div class="prev">
+      <div class="prev" @click= "prevFunction">
         <i class="fas fa-chevron-left"></i>
       </div>
 
       <div class="image">
-        <img src="" alt="">
+        <img :src="arrayImg[index]" alt="">
       </div>
 
-      <div class="next">
+      <div class="next" @click="nextFunction">
         <i class="fas fa-chevron-right"></i>
       </div>
 

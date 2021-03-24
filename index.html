@@ -28,9 +28,13 @@
 
       </div>
       <nav>
+        <!-- STAMPO UNA I PER OGNI ELEMENTO PRESENTE IN ARRAYIMG -->
+        <!-- AGGIUNGO ALLA I LA CLASSE ACTIVE SE L'INDICE DOT - 1 (PERCHE' VUE CONTA A PARTIRE DA 1) E' UGUALE A INDEX, CHE E' L'INDICE DELL'ARRAYIMG, ALTRIMENTI GLI AGGIUNGO CLASSE VUOTA -->
         <i v-for="dot in arrayImg.length"
            class="fas fa-circle"
-           :class=" (dot - 1 == index) ?  'active' : '' "></i>
+           :class=" (dot - 1 == index) ?  'active' : '' "
+             @click= "dotSelection(dot - 1)"
+           ></i>
       </nav>
     </div>
 
